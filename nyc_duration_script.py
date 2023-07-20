@@ -57,8 +57,8 @@ def estimate_quality(model, X_val, y_val):
     return mean_squared_error(y_pred, y_val, squared=False)
 
 if __name__ == '__main__':
-    train_frame = looad_data('/data/green_tripdata_2022-01.parquet')
-    val_frame = looad_data('/data/green_tripdata_2022-02.parquet')
+    train_frame = looad_data('data/green_tripdata_2022-01.parquet')
+    val_frame = looad_data('data/green_tripdata_2022-02.parquet')
     print(f"data loaded")
 
     X_train, X_val, y_train, y_val = generate_datasets(train_frame, val_frame)
